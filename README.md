@@ -1,1 +1,1 @@
-# Repo for various simple single page apps
+Repo for various simple single page apps
