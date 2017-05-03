@@ -23,30 +23,16 @@ function getData() {
                 data.push(integerValue/10);
             }
         };
-        console.log("Data:" + data);
         createChart(data);
     });
 }
 
 function createChart(snrData) {
-    console.log("Creating chart.");
+    console.log("Creating chart for data:" + snrData);
     var ctx = document.getElementById(chartId);
     var myChart = new Chart(ctx, {
         type: 'bar',
-        data: {
-            datasets: [{
-                label: 'Signal to Noise Ratio',
-                data: snrData
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
+        data: snrData,
+        options: {}
     });
 }
