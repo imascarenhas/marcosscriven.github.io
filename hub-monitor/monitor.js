@@ -1,3 +1,9 @@
+function run() {
+    $("body").html('<canvas id="signalToNoiseRatio" width="400" height="300"></canvas>');
+    getData();
+    createChart('signalToNoiseRatio');
+}
+
 function getData() {
     console.log("Getting data.");
     fetch('http://192.168.100.1/walk?oids=1.3.6.1.4.1.4491.2.1.20.1.24.1.1').then(x => {
