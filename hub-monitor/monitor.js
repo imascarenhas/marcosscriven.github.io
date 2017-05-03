@@ -1,8 +1,12 @@
 function run() {
-    $.getScript('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js');
-    $("body").html('<canvas id="signalToNoiseRatio" width="400" height="300"></canvas>');
-    getData();
-    createChart('signalToNoiseRatio');
+    $.getScript('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js').done(
+        () => {
+            document.body.className = '';
+            $("body").html('<canvas id="signalToNoiseRatio" width="400" height="300"></canvas>');
+            getData();
+            createChart('signalToNoiseRatio');
+        }
+    );
 }
 
 function getData() {
