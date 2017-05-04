@@ -1,1 +1,1 @@
-Repo for various simple single page apps
+Repo for various one-off tools/scripts/apps that might be useful to others, but don't warrant their own repo.
